@@ -1,0 +1,25 @@
+{
+  "name": "nodestuff",
+  "version": "1.0.0",
+  "description": "Node stuff",
+  "main": "blah.js",
+  "scripts": {
+    "start": "node watch.js",
+    "dev": "nodemon watch.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenlij/nodestuff.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenlij/nodestuff/issues"
+  },
+  "homepage": "https://github.com/jenlij/nodestuff#readme",
+  "dependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
