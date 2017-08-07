@@ -20,6 +20,10 @@
   },
   "homepage": "https://github.com/jenlij/nodestuff#readme",
   "dependencies": {
-    "nodemon": "^1.11.0"
+    "gm": "^1.23.0",
+    "nodemon": "^1.11.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "ws": "^3.1.0"
   }
 }

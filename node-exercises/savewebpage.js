@@ -12,51 +12,26 @@ const rp = require('request-promise');
 
 rl.question('URL: ', (url) => {
     rp(url)
-    .catch(function(err){
-        console.log(err.message);
-        return
-    })
     .then(function(rawHTML){
         rl.question('Save to file: ', (filename) => {
             fs.writeFile(filename, rawHTML, (err) => {
                 if (err) {
                     console.log(err.message);
+                    rl.close();
                     return;
                 }
                 console.log('Saved to file' + filename);
             });
         rl.close();
         });  
+    })
+    .catch(function(err){
+        console.log(err.message);
+        rl.close();
+        return;
     });
 });
 
 
 
 
-
-
-// const dns = require('dns');
-
-// rl.question('URL: ', (url) => {
-//     // dns.lookup(url, (err, address, family) => {
-//     //     if (err) {
-//     //         console.log(err.message);
-//     //         return;
-//     //     }
-//     https.get(url, (err, res) => {
-//         if (err) {
-//             console.log(err.message);
-//             return;
-//         }
-//         rl.question('Save to file: ', (filename) => {
-//             fs.writeFile(filename, res, (err) => {
-//                 if (err) {
-//                     console.log(err.message);
-//                     return;
-//                 }
-//                 console.log('Saved to file' + filename);
-//             });
-//         rl.close();
-//         });
-//     });
-// });
